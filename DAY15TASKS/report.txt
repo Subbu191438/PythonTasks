@@ -1,0 +1,10 @@
+Name  Marks Grade
+   A     36     C
+   B     85     A
+   C     51     B
+   D     63     B
+   E     69     B
+
+Mean: 60.8
+Std Dev: 16.545694303957145
+Floor Mean: 60
