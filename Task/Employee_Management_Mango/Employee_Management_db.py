@@ -24,6 +24,7 @@ db = client["company_db"]
 # Define the collections used in your routes
 employee_collection = db["employees"]
 attendance_collection = db["attendance"]
+department_collection = db["departments"]
 
 
 # ------------------------------------------------------------

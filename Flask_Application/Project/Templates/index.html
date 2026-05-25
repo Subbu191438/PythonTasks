@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Student Management</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="navbar">
+
+        <h2>Student Management</h2>
+
+        <div>
+            <a href="/">Home</a>
+            <a href="/add">Add Student</a>
+        </div>
+
+    </div>
+
+    <div class="container">
+
+        <div class="top-section">
+
+            <h1>Students List</h1>
+
+            <a href="/add">
+                <button class="add-btn">
+                    + Add Student
+                </button>
+            </a>
+
+        </div>
+
+        <div class="cards">
+
+            {% for student in students %}
+
+            <div class="card">
+
+                <h3>{{ student.name }}</h3>
+
+                <p>ID : {{ student.id }}</p>
+
+                <div class="btn-group">
+
+                    <a href="/update/{{ student.id }}">
+                        <button class="update-btn">
+                            Update
+                        </button>
+                    </a>
+
+                    <a href="/delete/{{ student.id }}">
+                        <button class="delete-btn">
+                            Delete
+                        </button>
+                    </a>
+
+                </div>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

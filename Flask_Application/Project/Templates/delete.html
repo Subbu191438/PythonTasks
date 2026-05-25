@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Delete Student</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="form-box">
+
+        <h1 style="color:red;">
+            Student Deleted Successfully
+        </h1>
+
+        <br>
+
+        <h2>{{ student.name }}</h2>
+
+        <br><br>
+
+        <a href="/">
+            <button class="submit-btn">
+                Go Home
+            </button>
+        </a>
+
+    </div>
+
+</body>
+
+</html>

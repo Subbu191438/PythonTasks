@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Add Student</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="form-box">
+
+        <h1>Add Student</h1>
+
+        <form method="POST">
+
+            <input type="text"
+                   name="name"
+                   placeholder="Enter Student Name"
+                   required>
+
+            <button class="submit-btn">
+                Add Student
+            </button>
+
+        </form>
+
+        {% if student %}
+
+        <div class="message">
+            Student Added Successfully
+        </div>
+
+        <br>
+
+        <a href="/">
+            <button class="submit-btn">
+                Back To Home
+            </button>
+        </a>
+
+        {% endif %}
+
+    </div>
+
+</body>
+
+</html>
